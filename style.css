@@ -1,0 +1,74 @@
+/* Definición de variables de color para los temas */
+:root {
+    /* Contraste 18:1 | Pensado para día y ambientes luminosos */
+    --bg-color: #ededed;
+    --text-color: #000000;
+    /* Sin modificar */
+    --header-bg: #f8f9fa;
+    --footer-bg: #f8f9fa;
+    --btn-bg: #e9ecef;
+    --btn-text: #222222;
+    --border-color: #dee2e6;
+}
+
+[data-theme="dark"] {
+    /* Contraste 15:1 | Pensado para noche y ambientes oscuros */
+    --bg-color: #272727;
+    --text-color: #ffffff;
+    /* Sin modificar */
+    --header-bg: #1e1e1e;
+    --footer-bg: #1e1e1e;
+    --btn-bg: #2d2d2d;
+    --btn-text: #f1f3f5;
+    --border-color: #333333;
+}
+
+/* Estilos base */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+}
